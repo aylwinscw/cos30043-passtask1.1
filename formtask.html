@@ -10,24 +10,28 @@
 <body>
 	<h1>WAI Form Example</h1>
 	<form method="post" action="http://mercury.ict.swin.edu.au/it000000/formtest.php">
-		<p>Contact Information</p>
-		<p> Name:
-			<input type="text" name="name" id="cname" /></p>
-		<p> E-mail Address:
-			<input type="text" name="email" id="cemail" /></p>
-		<p> Mailing Address:<br />
-			<textarea name="address" id="caddr" rows="4" cols="40"></textarea></p>
-		<p>Credit Card Information</p>
-		<p>
-			<label><input type="radio" name="card" id="cvisa" value="visa" /> Visa</label> 
-			<label><input type="radio" name="card" id="cmc" value="mc" /> MasterCard</label><br />
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="cname">Name: </label>
+                <input type="text" name="name" id="cname" />
+            <label for="cemail">E-mail Address: </label>
+                <input type="text" name="email" id="cemail" />
+            <label for="caddr"> Mailing Address:</label><br />
+                <textarea name="address" id="caddr" rows="4" cols="40"></textarea>
+            <p>Credit Card Information</p>
+            <p>
+                <label for="cvisa"><input type="radio" name="card" id="cvisa" value="visa" /> Visa</label> 
+                <label for="cmc"><input type="radio" name="card" id="cmc" value="mc" /> MasterCard</label><br />
 
-			<label>Number: <input type="text" name="number" id="cnumber"/></label><br />
-			<label>Expiry: <input type="text" name="expiry" id="cexpiry"/></label>
-		</p>
-		<p>
-			<input type="submit" value="Submit order" /> <input type="reset" value="Clear order" />
-		</p>
+                <label>Number: <input type="text" name="number" id="cnumber"/></label><br />
+                <label>Expiry: <input type="text" name="expiry" id="cexpiry"/></label>
+            </p>
+            <p>
+                <button type="submit" value="Submit order">Submit</button>
+                
+                <button type="reset" value="Clear order">Reset</button>
+            </p>
+        </fieldset>
 	</form> 
 </body>
 </html>
